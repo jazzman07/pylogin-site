@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,14 +10,20 @@
     background: #182227;
 }
 
+
+
+
 nav {
     margin: 10px;
     border: 2px solid #FFABC2bb;
     border-radius: 10px;
     background: #182227;
-    width: 100%;
-    padding: 10px 0;
-    max-width: 1335px;
+    width: 50%;
+    padding: 20px 0;
+    max-width: 59%;
+    position: absolute;
+    top: 0%;
+    right: 28%;
 }
 
 nav .menu {
@@ -32,6 +40,8 @@ nav .menu {
     color: #fff;
     font-size: 25px;
     font-weight: 600;
+    justify-content: space-between;
+    font-family: 'Abril Fatface', cursive;
 }
 
 .menu ul {
@@ -59,10 +69,6 @@ nav .menu {
     -webkit-transition: all .5s ease;
 }
 
-.con {
-    background: #FFABC2bb;
-}
-
 .img {
     background: #182227;
     height: 100vh;
@@ -71,43 +77,149 @@ nav .menu {
 
 .center {
     position: absolute;
-    top: 50%;
-    left: 15%;
+    top: 20%;
+    left: 25%;
 }
 
-.center .title {
-    color: #fff;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 40px;
+.center .c-title {
+    color: aliceblue;
+    font-family: 'Abril Fatface', cursive;
+
+
 }
 
-.center .main-title {
-    position: relative;
-    top: 0%;
-    left: 38%;
-    color: #fff;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 40px;
+.center .typewriter {
+    color: aliceblue;
 }
 
-.center .doc-button {
-    position: relative;
-    top: 30%;
-    left: 41%;
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 8px 15px;
-    border-radius: 7px;
-    transition: all 1 ease;
-    border: transparent;
-    background: aliceblue;
-}
-
-.center .doc-button:hover {
-    color: #000;
+.con {
     background: #FFABC2bb;
-    transition: all .5s ease;
-    -webkit-transition: all .5s ease;
 }
+
+
+
+
+
+.split {
+    height: 50%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+    background: linear-gradient(to top, #002b36 , #182227);
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+  
+
+  .wrapper{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .link_wrapper{
+    position: relative;
+  }
+  
+  .a{
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #002b36;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #333;
+    transition: all .35s;
+  }
+  
+  .icon{
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .35s;
+  }
+  
+  .icon svg{
+    width: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    transform: rotate(-45deg);
+    fill: #2ecc71;
+    transition: all .35s;
+  }
+  
+  .a:hover{
+    width: 200px;
+    border: 3px solid #2ecc71;
+    background: transparent;
+    color: #2ecc71;
+  }
+  
+  .a:hover + .icon{
+    border: 3px solid #2ecc71;
+    right: -25%;
+  }
+
+
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .45em solid aliceblue; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: aliceblue; }
+  }
+
+  
+
+
